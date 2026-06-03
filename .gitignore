@@ -20,6 +20,9 @@ data/*.db
 uploads/*
 !uploads/.gitkeep
 
+# Vercel
+.vercel/
+
 # IDE
 .vscode/
 .idea/

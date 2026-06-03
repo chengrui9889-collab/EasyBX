@@ -20,10 +20,10 @@ class Settings:
     ocr_max_workers: int = int(os.getenv("OCR_MAX_WORKERS", "2"))
     ocr_timeout_seconds: int = int(os.getenv("OCR_TIMEOUT_SECONDS", "120"))
 
-    cors_origins: list[str] = [
-        "http://localhost:5180",
-        "http://127.0.0.1:5180",
-    ]
+    cors_origins: list[str] = os.getenv(
+        "CORS_ORIGINS",
+        "http://localhost:5180,http://127.0.0.1:5180",
+    ).split(",")
 
     @property
     def max_upload_size_bytes(self) -> int:
