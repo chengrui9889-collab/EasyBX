@@ -1,5 +1,7 @@
 # 环境变量
 .env
+!.env.example
+!web/.env.production
 
 # Python
 __pycache__/
